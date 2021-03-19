@@ -38,7 +38,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: infralovers/standaline-firefox-behave:4
+          tags: infralovers/standalone-firefox-behave:4
           build-args: |
             baseimage=selenium/standalone-firefox:4
 
@@ -50,7 +50,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: infralovers/standaline-firefox-chrome:4
+          tags: infralovers/standalone-firefox-chrome:4
           build-args: |
             baseimage=selenium/standalone-chrome:4
 
@@ -62,7 +62,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: infralovers/standaline-opera-behave:4
+          tags: infralovers/standalone-opera-behave:4
           build-args: |
             baseimage=selenium/standalone-opera:4
 
@@ -74,7 +74,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: infralovers/standaline-edge-behave:4
+          tags: infralovers/standalone-edge-behave:4
           build-args: |
             baseimage=selenium/standalone-edge:4
 

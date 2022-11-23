@@ -1,3 +1,16 @@
+## 1.5.1 (2022-11-23)
+
+#### Bug Fixes
+
+* missed login to ghcr (bc9e50fc)
+* readme update (6465dfa7)
+* adding multi arch support (#7) (0034ff3c)
+
+#### Chores
+
+* **ci:** commit changes from go-semantic-release (f104895a)
+
+
 ## 1.5.0 (2022-11-22)
 
 #### Feature

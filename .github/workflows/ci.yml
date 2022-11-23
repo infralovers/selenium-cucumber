@@ -54,12 +54,12 @@ jobs:
         HUB_IMAGE="docker.io/$IMAGE_REPO/$IMAGE_NAME"
         QUAY_IMAGE="quay.io/$IMAGE_REPO/$IMAGE_NAME"
         GHCR_IMAGE="ghcr.io/${{ github.repository }}"
-        VERSION="${{ matrix.baseversion}}-dev"
+        VERSION="${{ matrix.baseversion }}-dev"
         if [[ '${{ needs.prebuild.outputs.version }}'  != '' ]]; then
-          VERSION="${{ matrix.baseversion}}"
+          VERSION="${{ matrix.baseversion }}"
         fi
         if [ "${{ github.event_name }}" = "schedule" ]; then
-          VERSION="${{ matrix.baseversion}}-nightly"
+          VERSION="${{ matrix.baseversion }}-nightly"
         fi
         TAGS="${QUAY_IMAGE}:${VERSION},${HUB_IMAGE}:${VERSION},${GHCR_IMAGE}:${VERSION}"
         if [[ $VERSION =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
@@ -99,6 +99,14 @@ jobs:
         registry: quay.io
         username: ${{ secrets.QUAY_USER }}
         password: ${{ secrets.QUAY_TOKEN }}
+
+    - name: Login to GitHub Container Registry
+      if: needs.prebuild.outputs.version != ''
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.BOT_ACCESS_TOKEN }}
 
     - name: Build and push
       id: docker_build

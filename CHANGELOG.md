@@ -1,3 +1,19 @@
+## 1.5.3 (2024-03-12)
+
+#### Bug Fixes
+
+* linting failure (e818536f)
+* lib minimization (20a0594b)
+
+#### Code Refactoring
+
+* trim down python libs (#11) (e6971eee)
+
+#### Chores
+
+* **ci:** commit changes from go-semantic-release (b0651772)
+
+
 ## 1.5.2 (2024-03-12)
 
 #### Bug Fixes

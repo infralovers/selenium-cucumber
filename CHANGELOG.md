@@ -1,3 +1,15 @@
+## 1.5.2 (2024-03-12)
+
+#### Bug Fixes
+
+* remove docker hub (#10) (0f88fb5a)
+* update flow (#9) (080d46c1)
+
+#### Chores
+
+* **ci:** commit changes from go-semantic-release (37877fac)
+
+
 ## 1.5.1 (2022-11-23)
 
 #### Bug Fixes

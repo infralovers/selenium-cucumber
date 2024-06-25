@@ -6,7 +6,7 @@ USER root
 
 # hadolint ignore=DL3013,DL3008,DL3015
 RUN apt-get update -q \
-    && apt-get install -y python3-pip python3-virtualenv \
+    && apt-get install -y ruby-full \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

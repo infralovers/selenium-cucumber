@@ -26,6 +26,6 @@ jobs:
       score: 50
       platforms: "linux/amd64, linux/arm64"
       release: true
-      image_name: "${{matrix.baseimage}}-behave"
+      image_name: "${{matrix.baseimage}}-cucumber"
       build_args: |
         SELENIUM_BASE=docker.io/selenium/${{ matrix.baseimage }}:${{ matrix.baseversion }}
